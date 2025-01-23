@@ -1,0 +1,47 @@
+ul.pagination li{
+    display: inline;
+}
+ul.pagination li a{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.active{
+    background-color: #DDD;  
+}
+ul.pagination li a:hover:not(.active){
+    background-color: #DDD;
+}
+.cabecalho{
+    background-color: #0F0E0E;
+    color: #FFF;
+}
+.linha:hover{
+    background-color: #DDD;
+}
+/*#mydatatable_length,
+#mydatatable_paginate,*/
+#mydatatable_info{
+    display: none;
+}
+#mydatatable_paginate{
+    margin: 1rem 0;
+    width: max-content;
+}
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+.dataTables_wrapper .dataTables_paginate {
+    float: left;
+    text-align: right;
+    padding-top: 0.25em;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+    border: none;
+    background-color: white;
+    background: #0d6efd;
+}
