@@ -1,67 +1,100 @@
-# CodeIgniter 4 Application Starter
+# 🥗 **Sistema Nutricional**
 
-## What is CodeIgniter?
+Bem-vindo ao **Sistema Nutricional**! Este sistema foi desenvolvido para facilitar a rotina de nutricionistas, oferecendo ferramentas práticas para gerenciar **agenda**, **pacientes**, **planos alimentares** e **relatórios de desempenho**.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+---
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## 🚀 **Sobre o Projeto**
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+O Sistema Nutricional é uma plataforma intuitiva e eficiente, criada para atender às necessidades de nutricionistas e melhorar a experiência no acompanhamento dos pacientes. O objetivo principal é simplificar o trabalho diário com recursos como gestão de agenda, criação de planos alimentares personalizados e visualização de relatórios detalhados.
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+🔹 **Principais Funcionalidades:**
+- **Agenda**: Gerencie compromissos e visualize horários disponíveis.
+- **Pacientes**: Controle de cadastro e informações nutricionais.
+- **Planos Alimentares**: Criação e personalização de dietas.
+- **Relatórios**: Acompanhamento do desempenho e progresso dos pacientes.
+- **Avisos e Notícias**: Atualizações e comunicados importantes.
 
-## Installation & updates
+---
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## 🛠 **Tecnologias Utilizadas**
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+- **PHP**: Linguagem principal para o backend.
+- **CodeIgniter 4**: Framework utilizado para estruturação e organização do projeto.
+- **Bootstrap**: Para criação de layouts responsivos e estilização.
+- **FontAwesome**: Ícones modernos para enriquecer a interface.
+- **MySQL**: Banco de dados para armazenamento de informações.
 
-## Setup
+---
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+## 📂 **Estrutura do Sistema**
 
-## Important Change with index.php
+- **Agenda**: Controle de compromissos diários e futuros.
+- **Pacientes**: Cadastro e gerenciamento de informações.
+- **Planos Alimentares**: Planejamento de dietas personalizadas.
+- **Relatórios**: Análises detalhadas sobre desempenho e progresso.
+- **Avisos**: Comunicação direta sobre eventos ou atualizações.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+---
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## 🔧 **Como Executar o Projeto**
 
-**Please** read the user guide for a better explanation of how CI4 works!
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/sistema-nutricional.git
+   ```
 
-## Repository Management
+2. Acesse o diretório do projeto:
+   ```bash
+   cd sistema-nutricional
+   ```
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+3. Configure o arquivo `.env` para conexão com o banco de dados.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+4. Rode as migrações para criar as tabelas no banco de dados:
+   ```bash
+   php spark migrate
+   ```
 
-## Server Requirements
+5. Inicie o servidor local:
+   ```bash
+   php spark serve
+   ```
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+6. Acesse o sistema no navegador:
+   ```
+   http://localhost:8080
+   ```
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+---
 
-> **Warning**
-> The end of life date for PHP 7.4 was November 28, 2022. If you are
-> still using PHP 7.4, you should upgrade immediately. The end of life date
-> for PHP 8.0 will be November 26, 2023.
+## 📸 **Preview do Sistema**
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### Dashboard:
+![Dashboard](./screenshots/dashboard.png)
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+### Gerenciamento de Pacientes:
+![Pacientes](./screenshots/pacientes.png)
+
+### Planos Alimentares:
+![Planos Alimentares](./screenshots/planos-alimentares.png)
+
+---
+
+## ✨ **Próximas Implementações**
+
+- Integração com APIs de nutrição para cálculo automático de macronutrientes.
+- Sistema de notificações para lembretes de compromissos.
+- Exportação de relatórios em PDF.
+- Melhorias na responsividade para dispositivos móveis.
+
+---
+
+## 📞 **Contato**
+
+Se você tiver dúvidas ou sugestões sobre o sistema, entre em contato:
+
+- **Email:** williamdf2308@gmail.com
+- **LinkedIn:** [https://www.linkedin.com/in/williamsousa-dev/](https://www.linkedin.com/in/williamsousa-dev/)
+
+---
