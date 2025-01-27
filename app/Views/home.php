@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <i class="fas fa-calendar-alt fa-2x text-success mb-3"></i>
                     <h5 class="card-title">Agenda</h5>
-                    <a href="#" class="btn btn-outline-success">Acessar</a>
+                    <a href="/agenda" class="btn btn-outline-success">Acessar</a>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                 <div class="card-body">
                     <i class="fas fa-user-friends fa-2x text-info mb-3"></i>
                     <h5 class="card-title">Pacientes</h5>
-                    <a href="#" class="btn btn-outline-info">Acessar</a>
+                    <a href="/pacientes" class="btn btn-outline-info">Acessar</a>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                 <div class="card-body">
                     <i class="fas fa-utensils fa-2x text-warning mb-3"></i>
                     <h5 class="card-title">Planos Alimentares</h5>
-                    <a href="#" class="btn btn-outline-warning">Acessar</a>
+                    <a href="/planos-alimentares" class="btn btn-outline-warning">Acessar</a>
                 </div>
             </div>
         </div>
