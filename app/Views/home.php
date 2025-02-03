@@ -1,4 +1,4 @@
-<?php echo $this->extend('master'); ?>
+<?= $this->extend('master'); ?>
 
 <?= $this->section('content') ?>
 
@@ -7,21 +7,12 @@
 
     <!-- Título e Subtítulo -->
     <div class="text-center my-4">
-        <h1 class="display-5 text-primary">Bem-vindo ao Sistema Nutricional!</h1>
-        <p class="lead text-secondary">Gerencie sua agenda, pacientes e planos alimentares com facilidade.</p>
+        <h1 class="display-5 text-primary">Bem-vindo, Nutricionista!</h1>
+        <p class="lead text-secondary">Gerencie o progresso nutricional dos seus pacientes e acompanhe suas metas.</p>
     </div>
 
     <!-- Cartões Principais -->
     <div class="row text-center mb-5">
-        <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <i class="fas fa-calendar-alt fa-2x text-success mb-3"></i>
-                    <h5 class="card-title">Agenda</h5>
-                    <a href="/agenda" class="btn btn-outline-success">Acessar</a>
-                </div>
-            </div>
-        </div>
         <div class="col-lg-3 col-md-6 mb-4">
             <div class="card shadow-sm">
                 <div class="card-body">
@@ -45,19 +36,20 @@
                 <div class="card-body">
                     <i class="fas fa-chart-line fa-2x text-primary mb-3"></i>
                     <h5 class="card-title">Relatórios</h5>
-                    <a href="#" class="btn btn-outline-primary">Acessar</a>
+                    <a href="/relatorios" class="btn btn-outline-primary">Acessar</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Outras Informações -->
+    <!-- Gráficos e Informações Gerais -->
     <div class="row">
         <div class="col-lg-6 mb-4">
             <div class="card shadow-sm">
-                <div class="card-header bg-primary text-white">Gráficos de Desempenho</div>
+                <div class="card-header bg-primary text-white">Desempenho dos Pacientes</div>
                 <div class="card-body">
-                    <!-- Gráfico aqui -->
+                    <canvas id="patientPerformanceChart" width="400" height="200"></canvas>
+                    <p class="text-muted mt-3">Status geral baseado nos dados atuais de acompanhamento nutricional.</p>
                 </div>
             </div>
         </div>
@@ -65,27 +57,8 @@
             <div class="card shadow-sm">
                 <div class="card-header bg-success text-white">Relatórios Recentes</div>
                 <div class="card-body">
-                    <p>Acesse os relatórios mais recentes e detalhados.</p>
-                    <a href="#" class="btn btn-success">Ver Relatórios</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-6 mb-4">
-            <div class="card shadow-sm">
-                <div class="card-header bg-info text-white">Avisos e Notícias</div>
-                <div class="card-body">
-                    <p><strong>22/01/2025:</strong> Não há avisos e notícias.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6 mb-4">
-            <div class="card shadow-sm">
-                <div class="card-header bg-warning text-white">Compromissos de Hoje</div>
-                <div class="card-body">
-                    <p>Sem compromissos agendados.</p>
+                    <p>Acesse relatórios detalhados sobre o progresso dos pacientes e suas metas.</p>
+                    <a href="/relatorios" class="btn btn-success">Ver Relatórios</a>
                 </div>
             </div>
         </div>
@@ -93,10 +66,43 @@
 
     <!-- Footer -->
     <footer class="text-center mt-5 pt-3 border-top">
-        <p class="text-muted">&copy; 2025 Sistema Nutri Fernanda Amorim. <br>Vamos juntos construir o seu melhor estilo de vida!</p>
+        <p class="text-muted">&copy; 2025 Sistema Nutri Fernanda Amorim. <br>Vamos juntos construir o melhor estilo de vida dos seus pacientes!</p>
     </footer>
 </div>
 
-
+<!-- Adicionando Script para o Gráfico -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('patientPerformanceChart').getContext('2d');
+    const patientPerformanceChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Atingiram a Meta', 'Em Progresso', 'Não Atingiram'],
+            datasets: [{
+                label: 'Desempenho Geral dos Pacientes',
+                data: [45, 35, 20], // Exemplo: ajustar conforme os dados reais
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.6)',  // Verde - Atingiram
+                    'rgba(255, 206, 86, 0.6)',  // Amarelo - Em Progresso
+                    'rgba(255, 99, 132, 0.6)'   // Vermelho - Não Atingiram
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+</script>
 
 <?= $this->endSection() ?>
